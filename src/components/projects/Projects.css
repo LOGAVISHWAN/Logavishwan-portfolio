@@ -1,0 +1,13 @@
+.projects-heading{
+    text-align: center;
+}
+.projects-container{
+    display: flex;
+}
+.project{
+    width: 45%;
+    text-align: center;
+}
+.project-content{
+    width: 45%;
+}

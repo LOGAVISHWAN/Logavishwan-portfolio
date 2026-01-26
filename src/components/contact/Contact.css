@@ -1,0 +1,24 @@
+.contact-container{
+    display: flex;
+        gap: 2rem;
+}
+.encourage{
+    width: 40%;
+}
+.contact-form-container{
+    width: 40%;
+    border: 1px solid;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-action-buttons{
+    width: 100%;
+}
+.send-button{
+    margin: 0px var(--spacing2) 0px auto;
+}
+

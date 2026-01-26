@@ -1,0 +1,22 @@
+.home-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: var(--color-primary);
+}
+
+.hero-image{
+    width: 20rem;
+    height: auto;
+    margin: 1rem;
+    margin-left: 7rem;
+}
+ img{
+    max-width: 100%;
+    display: block;
+ }
+ .home-content{
+    flex: 1;
+    color: white;
+    margin-top: 3rem;
+    margin-left: 3rem;
+ }
