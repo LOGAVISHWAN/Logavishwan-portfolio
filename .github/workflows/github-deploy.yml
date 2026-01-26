@@ -1,0 +1,47 @@
+name: Logavishwan Portfolio
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+    path:
+      - '**'
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      #checkout the repository
+      - name: clone the repository code 
+        uses: actions/checkout@v4
+
+      #set up node js
+      - name: set up node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22.16.0
+
+      #Install Dependencies
+      - name: Install Dependencies
+        run: npm install
+
+      #Build the project
+      - name: Build project
+        run: npm run build
+
+      # Deploy to Github Pages
+      - name: deploy project
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
+
+
+    

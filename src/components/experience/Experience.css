@@ -1,0 +1,10 @@
+.experience-container{
+    display: flex;
+}
+.year{
+    width: 45%;
+}
+.experience{
+    width: 45%;
+    border-left: 1px solid var(--color-primary);
+}
