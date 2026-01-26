@@ -9,9 +9,6 @@ on:
       - main
     path:
       - '**'
-  push:
-    branches:
-      - main
 
 jobs:
   build-deploy:
