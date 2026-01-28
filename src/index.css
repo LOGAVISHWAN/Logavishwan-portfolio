@@ -7,11 +7,12 @@
 }
 
 :root{
-  --bg-color-primary: hsl(0,0%,10%);
-  --bg-color-secondary: hsl(0,0%,30%);
-  --bg-color-tertiary: hsl(0,0%,50%);
-  --color-primary: hsl(0, 0%, 100%);
-  --color-secondary: hsl(0,0%,85%);
+  --bg-color-primary: hsl(0,0%,0%); /* dark */
+  --bg-color-secondary: hsl(0,0%,5%);
+  --bg-color-tertiary: hsl(0,0%,10%);
+  --border-color: hsl(0,0%,40%);
+  --color-primary: hsl(0, 0%, 95%);
+  --color-secondary: hsl(0,0%,70%);
   --h1-font: 2rem;
   --h2-font: 1.75rem;
   --sh1-font: 1.50rem;
@@ -31,8 +32,18 @@ html{
   font-size: 16px;
 }
 
+body.light{
+  --bg-color-primary: hsl(0,0%,85%); /* dark */
+  --bg-color-secondary: hsl(0,0%,80%);
+  --bg-color-tertiary: hsl(0,0%,75%);
+  --border-color: hsl(0,0%,60%);
+  --color-primary: hsl(0, 0%, 5%);
+  --color-secondary: hsl(0,0%,30%);
+}
+
 body{
   font-family: Inter, sans-serif;
   background-color: var(--bg-color-primary);
+  color: var(--color-primary);
 }
 
