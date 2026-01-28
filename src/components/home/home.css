@@ -1,5 +1,6 @@
 .home-container{
     display: grid;
+    gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
     color: var(--color-primary);
 }
@@ -7,16 +8,28 @@
 .hero-image{
     width: 20rem;
     height: auto;
-    margin: 1rem;
-    margin-left: 7rem;
+    margin-left: 3rem;
 }
  img{
     max-width: 100%;
     display: block;
  }
  .home-content{
-    flex: 1;
-    color: white;
+    color: var(--color-primary);
     margin-top: 3rem;
-    margin-left: 3rem;
+ }
+ .about-me{
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color-secondary);
+    border-radius: 20px;
+    padding: 1rem;
+    margin-right: 3rem;
+ }
+
+ .about-me h1{
+    margin-bottom: 0.75rem;
+ }
+
+ .about-me p{
+    line-height: 24px;
  }

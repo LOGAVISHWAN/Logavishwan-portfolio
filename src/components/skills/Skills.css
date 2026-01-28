@@ -10,5 +10,5 @@
     flex-direction: column;
 }
 .skills-sub-container2{
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--border-color);
 }

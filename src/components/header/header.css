@@ -9,28 +9,125 @@
 }
 
 .brand{
+    width: 3rem;
+    height: 3rem;
     margin-left: var(--spacing1);
-    border: 1px solid var(--color-secondary);
+    border: 1px solid var(--border-color);
     padding: var(--spacing4);
     border-radius: 50%;
     font-style: italic;
+    animation: spin 3s linear infinite;
+}
+
+.spin-counter{
+    animation: spin-counter 3s linear infinite;
 }
 
 .nav-links{
     display: flex;
     gap: var(--spacing2);
     background-color: var(--bg-color-secondary);
-    border: 1px solid var(--color-secondary);
+    border: 1px solid var(--border-color);
     padding: 0 var(--spacing1-2);
     border-radius: 15px;
     align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, display 0.3s allow-discrete;
+}
+
+.nav-links-mobile{
+    display: block;
+    opacity: 1;
+    position: absolute;
+    top: 82px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    background-color: var(--bg-color-secondary);
+    border-radius: 80px;
+}
+
+.nav-links-mobile p{
+    margin: 0.3rem;
 }
 
 .theme-mode{
     display: flex;
+    gap: var(--spacing4);
     margin-right: var(--spacing1);
-    border: 1px solid var(--color-secondary);
-    padding: 0 var(--spacing3-4);
+    border: 1px solid var(--border-color);
+    padding: 0 var(--spacing3);
     border-radius: 15px;
     align-items: center;
+}
+
+.theme-mode:hover{
+    cursor: pointer;
+}
+
+.mobile-nav{
+    display: none;
+    width: 30%;
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, display 0.3s allow-discrete;
+}
+
+.drawer{
+    height: 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+}
+.drawer-arrow{
+    text-align: center;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 857px){
+
+    .theme-mode-text{
+        display: none;
+    }
+    .nav-links{
+        display: none;
+        opacity: 0;
+    }
+    .mobile-nav{
+        display: block;
+        opacity: 1;
+        @starting-style {
+            opacity: 0;
+        }
+    }
+    
+}
+
+/* Ensure the desktop nav also fades in smoothly when resizing UP */
+@media screen and (min-width: 858px) {
+    .nav-links {
+          @starting-style {
+            opacity: 0;
+        }
+    }
+}
+
+
+@keyframes spin {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg
+    }
+}
+
+@keyframes spin-counter {
+    from{
+        transform: rotate(0deg);
+    }
+  to { transform: rotate(-360deg); }
 }
